@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+#main {
+  background-color: #fff3dc;
+  border-radius: 30px;
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+}
+
+.content main {
+    flex: 1;
+}
