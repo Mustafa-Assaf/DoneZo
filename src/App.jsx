@@ -5,13 +5,15 @@ import "./App.css";
 
 function App() {
   return (
-    <div id="main">
+    <div id="homepage">
       <Navbar />
       <div className="content">
         <Sidebar />
-        <main></main>
+        <main>
+            
+        </main>
       </div>
-      
+
       <Footer />
     </div>
   );

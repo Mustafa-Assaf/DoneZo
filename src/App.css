@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
 * {
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 
 body {
@@ -8,7 +12,7 @@ body {
   padding: 0;
 }
 
-#main {
+#homepage {
   background-color: #fff3dc;
   border-radius: 30px;
   width: 100%;
@@ -19,10 +23,10 @@ body {
 }
 
 .content {
-    display: flex;
-    flex: 1;
+  display: flex;
+  flex: 1;
 }
 
 .content main {
-    flex: 1;
+  flex: 1;
 }
