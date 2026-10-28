@@ -1,7 +1,8 @@
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 import "./App.css";
+import Workspace from "./components/Workspace";
 
 function App() {
   return (
@@ -9,8 +10,8 @@ function App() {
       <Navbar />
       <div className="content">
         <Sidebar />
-        <main>
-            
+        <main className="workSpace">
+            <Workspace />
         </main>
       </div>
 

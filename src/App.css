@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -22,6 +22,10 @@ body {
   flex-direction: column;
 }
 
+.workSpace {
+  
+}
+
 .content {
   display: flex;
   flex: 1;
@@ -29,4 +33,40 @@ body {
 
 .content main {
   flex: 1;
+}
+
+.listContainer {
+  border: rgb(159, 159, 185) solid 5px;
+  border-radius: 30px;
+  min-width: 250px;
+  max-width: 400px;
+  margin: 10px;
+}
+.listContainer h2 {
+  text-align: center;
+  margin: 10px;
+}
+
+.styleListItems {
+  display: flex;
+  min-width: 250px;
+  background-color: #f1e7fa;
+  color: #382b48;
+  padding: 15px;
+  margin: 5px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  list-style: none;
+  text-align: left;
+}
+
+.styleListItems button {
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+}
+
+.styleListItems input {
+  accent-color: green;
 }

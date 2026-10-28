@@ -1,3 +1,5 @@
+import { House, Info } from "lucide-react";
+
 function Sidebar (){
     const styleSidebar = {
         width: "200px",
@@ -15,18 +17,19 @@ function Sidebar (){
     const stylesLink = {
         backgroundColor: " #fff3dc",
         margin: "10px",
-        borderRadius: "50px",
+        borderRadius: "30px",
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "space-evenly",
         alignItems: "center",
-        height: "30px"
+        height: "40px",
+        textDecoration: "none"
     }
 
     return (
         <aside style={styleSidebar}>
             <nav style={stylesNav}>
-                <a style={stylesLink} href="">Home</a>
-                <a style={stylesLink} href="">About</a>
+                <a style={stylesLink} href=""><House size={22} />Home</a>
+                <a style={stylesLink} href=""><Info size={22} />About</a>
             </nav>
         </aside>
     )
