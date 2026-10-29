@@ -3,7 +3,7 @@
 * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 body {
@@ -37,6 +37,15 @@ body {
   flex-direction: column;
 }
 
+#styleFooter {
+    width: 100%;
+    min-height: 50px;
+    background-color: #173B65;
+    border-radius: 0 0 30px 30px;
+    display: flex;
+    justify-content: center;
+}
+
 #stylesLink {
   background-color: #fff3dc;
   margin: 10px;
@@ -63,6 +72,7 @@ body {
   min-width: 250px;
   max-width: 400px;
   margin: 10px auto;
+  padding: 5px;
 }
 .listContainer h2 {
   text-align: center;
@@ -98,7 +108,7 @@ body {
 }
 
 .styleListItems input {
-  accent-color: green;
+  accent-color: #A8DCC0;
 }
 
 #aboutPage {
@@ -123,9 +133,13 @@ body {
   flex-direction: row;
 }
 
-.aboutContainer.teamBox img{
-  border-radius: 30px;
+.aboutContainer.teamBox img {
+  border-radius: 25px;
   margin-right: 5px;
-  position: relative;
   left: 0;
+}
+
+.aboutImages {
+  display: flex;
+  flex-direction: column;
 }
