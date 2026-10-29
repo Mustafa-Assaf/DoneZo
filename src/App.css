@@ -23,9 +23,6 @@ body {
   flex-direction: column;
 }
 
-.homePage {
-}
-
 #styleSidebar {
   max-width: 200px;
   min-width: 150px;
@@ -65,8 +62,7 @@ body {
   border-radius: 30px;
   min-width: 250px;
   max-width: 400px;
-  margin: 10px;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 .listContainer h2 {
   text-align: center;
@@ -95,4 +91,33 @@ body {
 
 .styleListItems input {
   accent-color: green;
+}
+
+#aboutPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutContainer {
+  border: rgb(159, 159, 185) solid 5px;
+  border-radius: 30px;
+  margin: 0 10px 10px 10px;
+  padding: 0 10px 0 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutContainer.teamBox {
+  padding: 0;
+  flex-direction: row;
+}
+
+.aboutContainer.teamBox img{
+  border-radius: 30px;
+  margin-right: 5px;
+  position: relative;
+  left: 0;
 }
