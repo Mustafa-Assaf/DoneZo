@@ -1,8 +1,12 @@
+import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import "./App.css";
-import Workspace from "./components/Workspace";
+import HomePage from "./components/HomePage";
+import About from "./components/About";
+import NotFound from "./components/NotFound";
+import TaskDetails from "./components/TaskDetails";
 
 function App() {
   return (
@@ -10,8 +14,13 @@ function App() {
       <Navbar />
       <div className="content">
         <Sidebar />
-        <main className="workSpace">
-            <Workspace />
+        <main className="homePage">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/task-details" element={<TaskDetails />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
         </main>
       </div>
 

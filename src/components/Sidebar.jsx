@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { House, Info } from "lucide-react";
 
 function Sidebar (){
@@ -28,8 +29,8 @@ function Sidebar (){
     return (
         <aside style={styleSidebar}>
             <nav style={stylesNav}>
-                <a style={stylesLink} href=""><House size={22} />Home</a>
-                <a style={stylesLink} href=""><Info size={22} />About</a>
+                <Link to="/" style={stylesLink} href=""><House size={22} />Home</Link>
+                <Link to="/About" style={stylesLink} href=""><Info size={22} />About</Link>
             </nav>
         </aside>
     )

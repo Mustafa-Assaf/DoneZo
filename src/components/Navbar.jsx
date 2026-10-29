@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
   const styleNav = {
     display: "flex",
@@ -15,7 +17,9 @@ function Navbar() {
 
   return (
     <nav style={styleNav}>
-        <img style = {imgStyles} src="/src/assets/images/logo2.png" alt=""  />
+        <Link to="/">
+        <img style = {imgStyles} src="/src/assets/images/logo2.png" alt="" />
+        </Link>
       <div>
         
       </div>

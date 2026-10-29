@@ -7,7 +7,6 @@ function ListItem({ handleTaskCheck, handleTaskRemove, item, index }) {
 
   return (
     <li
-      key={index}
       className="styleListItems"
       style={item.completed ? styleListItemsDone : {}}
     >
