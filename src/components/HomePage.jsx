@@ -1,9 +1,7 @@
-import { useState } from "react";
-import taskList from "../data/tasklist.json";
 import ListTask from "./ListTask"
 
-function Workspace() {
-  const [taskValue, setTaskValue] = useState(taskList);
+function HomePage ({taskValue, setTaskValue}) {
+  
 
   const handleTaskRemove = (index) => {
     const stateCopy = [...taskValue];
@@ -33,4 +31,4 @@ function Workspace() {
   );
 }
 
-export default Workspace;
+export default HomePage;

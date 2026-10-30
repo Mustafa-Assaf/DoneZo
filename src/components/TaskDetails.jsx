@@ -1,12 +1,19 @@
+import { ChessKing } from "lucide-react";
 import {useParams, Link} from "react-router-dom";
 
-function TaskDetails() {
+function TaskDetails({taskValue, setTaskValue}) {
 
   const {taskId} = useParams ();
-  console.log(taskId);
+  console.log(typeof taskId);
+  console.log(taskValue.id);
+
+  const foundTask = taskValue.find ((task)=> task.id === taskId);
+  console.log(foundTask);
+
+  //Create local state and onChange handlers to handle form input
 
   return (
-    <div className = "taskDetailsContainer">
+    <div className = "listContainer">
     <h2>Edit Task</h2>
 
     <form>
@@ -18,6 +25,7 @@ function TaskDetails() {
             id="task"
             name="task"
             placeholder="Enter task name"
+            
           />
         </div>
 
@@ -27,6 +35,7 @@ function TaskDetails() {
           <input
             id="description"
             name="description"
+            value={foundTask.task}
             placeholder="Add a description..."
           />
         </div>

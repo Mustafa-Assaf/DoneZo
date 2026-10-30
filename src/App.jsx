@@ -7,8 +7,12 @@ import HomePage from "./components/HomePage";
 import About from "./components/About";
 import NotFound from "./components/NotFound";
 import TaskDetails from "./components/TaskDetails";
+import taskList from "./data/tasklist.json";
+import { useState } from "react";
 
 function App() {
+  const [taskValue, setTaskValue] = useState(taskList);
+
   return (
     <div id="homepage">
       <Navbar />
@@ -16,9 +20,9 @@ function App() {
         <Sidebar />
         <main className="homePage">
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage taskValue={taskValue} setTaskValue={setTaskValue}/>} />
             <Route path="/about" element={<About />} />
-            <Route path="/task-details/:taskId" element={<TaskDetails />} />
+            <Route path="/task-details/:taskId" element={<TaskDetails taskValue={taskValue} setTaskValue={setTaskValue}/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

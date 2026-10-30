@@ -72,7 +72,7 @@ body {
   min-width: 250px;
   max-width: 400px;
   margin: 10px auto;
-  padding: 5px;
+  padding: 0 15px 15px 10px;
 }
 .listContainer h2 {
   text-align: center;
