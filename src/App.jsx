@@ -18,7 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<About />} />
-            <Route path="/task-details" element={<TaskDetails />} />
+            <Route path="/task-details/:taskId" element={<TaskDetails />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

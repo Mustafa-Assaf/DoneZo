@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import {SquarePen, Trash2} from "lucide-react";
+import { SquarePen, Trash2 } from "lucide-react";
 
 function ListItem({ handleTaskCheck, handleTaskRemove, item, index }) {
   const styleListItemsDone = {
     textDecoration: "line-through",
   };
-
+console.log("TASK OBJECT:", item.id);
   return (
     <li
       className="styleListItems"
@@ -17,8 +17,8 @@ function ListItem({ handleTaskCheck, handleTaskRemove, item, index }) {
         type="checkbox"
       />
       <span>{item.task}</span>
-      <Link to = "./task-details" className = "taskEditLink">
-      <SquarePen size = {20} color = "blue" /> 
+      <Link to={`/task-details/${item.id}`} className="taskEditLink">
+        <SquarePen size={20} color="blue" />
       </Link>
       <button onClick={() => handleTaskRemove(index)}>
         <Trash2 size={20} color="#C65F6A" />
