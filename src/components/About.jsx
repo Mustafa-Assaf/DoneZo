@@ -16,8 +16,7 @@ function About() {
         
         <p><i>De Waal Rossouw</i> <br />
         
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-          repudiandae atque vero reprehenderit consequuntur exercitationem odit.
+         A world traveller turned aspiring web developer! After years of teaching English abroad, I'm now based in Lisbon, developing my skills in JavaScript, React, HTML, and CSS. My goal is to become a full-stack developer, building responsive, user-friendly applications that solve real-world problems.
         </p>
         <div className="aboutImages">
           <a href="https://github.com/dwrossouw"><img src="/src/assets/images/githublogo2.png" alt="" width="50px" /></a>
