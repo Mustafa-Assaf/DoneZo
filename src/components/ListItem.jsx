@@ -17,9 +17,11 @@ console.log("TASK OBJECT:", item.id);
         type="checkbox"
       />
       <span>{item.task}</span>
+
       <Link to={`/task-details/${item.id}`} className="taskEditLink">
         <SquarePen size={20} color="blue" />
       </Link>
+      
       <button onClick={() => handleTaskRemove(index)}>
         <Trash2 size={20} color="#C65F6A" />
       </button>
