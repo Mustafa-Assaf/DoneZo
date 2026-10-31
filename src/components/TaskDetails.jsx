@@ -1,75 +1,76 @@
 import { ChessKing } from "lucide-react";
-import {useParams, Link} from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
-function TaskDetails({taskValue, setTaskValue}) {
-
-  const {taskId} = useParams ();
+function TaskDetails({ taskValue, setTaskValue }) {
+  const { taskId } = useParams();
   console.log(typeof taskId);
   console.log(taskValue.id);
 
-  const foundTask = taskValue.find ((task)=> task.id === taskId);
+  const foundTask = taskValue.find((task) => task.id === taskId);
   console.log(foundTask);
 
   //Create local state and onChange handlers to handle form input
 
   return (
-    <div className = "listContainer">
-    <h2>Edit Task</h2>
+    <div className="listContainer">
+      <h2>Task Details</h2>
 
-    <form>
-            {/* Task name */}
-            <div>
+      <form>
+        {/* Task name */}
+        <div className="formContainer">
           <label title="task">Task Name</label>
           <input
             type="text"
             id="task"
             name="task"
+            value={foundTask.task}
             placeholder="Enter task name"
-            
           />
         </div>
 
         {/* Description */}
-        <div>
+        <div className="formContainer">
           <label title="description">Description</label>
           <input
             id="description"
             name="description"
-            value={foundTask.task}
+            value={foundTask.description}
             placeholder="Add a description..."
           />
         </div>
+        <div className="statusPriorityContainer">
+          {/* Status */}
+          <div className="statusPriority">
+            <label title="status">Status</label>
+            <select
+              id="status"
+              name="status"
+              value={foundTask.completed === true ? "completed" : "pending"}
+            >
+              <option value="pending">Pending</option>
+              <option value="completed">Completed</option>
+            </select>
+          </div>
 
-        {/* Status */}
-        <div>
-          <label title="status">Status</label>
-          <select id="status" name="status">
-            <option value="pending">Pending</option>
-            <option value="completed">Completed</option>
-          </select>
-        </div>
-
-        {/* Priority */}
-        <div>
-          <label title="priority">Priority</label>
-          <select id="priority" name="priority">
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
-          </select>
+          {/* Priority */}
+          <div className="statusPriority">
+            <label title="priority">Priority</label>
+            <select id="priority" name="priority" value={foundTask.priority}>
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+          </div>
         </div>
 
         <div className="taskDetailsButtons">
-          <button type="submit">Save Changes</button>
-
           <Link to="/">
-            <button type="button">Cancel</button>
+            <button id="cancelBtn" type="button">Cancel</button>
           </Link>
+          <button id="saveBtn" type="submit">Save Task</button>
         </div>
-
       </form>
-
-      </div>
+    </div>
   );
 }
 

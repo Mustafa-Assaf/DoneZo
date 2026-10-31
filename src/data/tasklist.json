@@ -3,42 +3,49 @@
   {
     "id": "1",
     "task": "Read the project brief",
+    "description": "Review the project requirements, objectives, and expected deliverables.",
     "completed": true,
     "priority": "High"
   },
   {
     "id": "2",
     "task": "Create a project repository",
+    "description": "Set up a GitHub repository to store and manage the project's code.",
     "completed": false,
     "priority": "Medium"
   },
   {
     "id": "3",
     "task": "Create React application using Vite",
+    "description": "Initialize a React application with Vite and configure the development environment.",
     "completed": false,
     "priority": "High"
   },
   {
     "id": "4",
     "task": "Finish Day 1 Development Tasks",
+    "description": "Complete the first day's coding activities and build the initial application structure.",
     "completed": false,
     "priority": "High"
   },
   {
     "id": "5",
     "task": "Finish Day 1 Research Tasks",
+    "description": "Research React concepts, project dependencies, and useful development resources.",
     "completed": false,
     "priority": "Low"
   },
   {
     "id": "6",
     "task": "Finish Day 2 Development Tasks",
+    "description": "Implement additional components, functionality, and styling for the application.",
     "completed": false,
     "priority": "High"
   },
   {
     "id": "7",
     "task": "Finish Day 2 Research Tasks",
+    "description": "Explore React state management, component communication, and best practices.",
     "completed": false,
     "priority": "Medium"
   }

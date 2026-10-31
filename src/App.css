@@ -38,12 +38,12 @@ body {
 }
 
 #styleFooter {
-    width: 100%;
-    min-height: 50px;
-    background-color: #173B65;
-    border-radius: 0 0 30px 30px;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  min-height: 50px;
+  background-color: #173b65;
+  border-radius: 0 0 30px 30px;
+  display: flex;
+  justify-content: center;
 }
 
 #stylesLink {
@@ -67,16 +67,45 @@ body {
 }
 
 .listContainer {
-  border: rgb(159, 159, 185) solid 5px;
+  background-color: #ffffff;
+  /* border: rgb(159, 159, 185) solid 5px; */
   border-radius: 30px;
-  min-width: 250px;
-  max-width: 400px;
+  width: 100%;
+  max-width: 500px;
   margin: 10px auto;
   padding: 0 15px 15px 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 .listContainer h2 {
   text-align: center;
   margin: 10px;
+  color: #173b65;
+}
+
+.listContainer form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.listContainer label {
+  color: #173b65;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer input {
+  background-color: #f4f5fa;
+  border: 1px solid #e2e6ef;
+  border-radius: 8px;
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
 }
 
 .styleListItems {
@@ -108,7 +137,59 @@ body {
 }
 
 .styleListItems input {
-  accent-color: #A8DCC0;
+  accent-color: #a8dcc0;
+}
+
+.statusPriorityContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+.statusPriority {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 10px 0px 10px;
+}
+
+.statusPriority select {
+  background-color: #f4f5fa;
+  border: 1px solid #e2e6ef;
+  border-radius: 8px;
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.taskDetailsButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.taskDetailsButtons button {
+  border-radius: 8px;
+  padding: 10px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+#cancelBtn {
+  color: #173b65;
+  background-color: white;
+  border: solid 1px #cbd5e1;
+}
+
+#cancelBtn:hover {
+  background-color: #f4f5fa;
+}
+
+#saveBtn:hover {
+  background-color: #173b65;
+}
+
+#saveBtn {
+  background-color: #24558a;
+  color: white;
 }
 
 #aboutPage {
