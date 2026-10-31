@@ -68,7 +68,6 @@ body {
 
 .listContainer {
   background-color: #ffffff;
-  /* border: rgb(159, 159, 185) solid 5px; */
   border-radius: 30px;
   width: 100%;
   max-width: 500px;
@@ -99,13 +98,22 @@ body {
   flex-direction: column;
 }
 
-.formContainer input {
+.formContainer input,
+.formContainer textarea {
   background-color: #f4f5fa;
   border: 1px solid #e2e6ef;
   border-radius: 8px;
   width: 100%;
   padding: 10px 12px;
   font-size: 14px;
+}
+
+.formContainer textArea {
+  field-sizing: content;
+  min-height: 80px;
+  max-height: 250px;
+  resize: none;
+  overflow-y: auto;
 }
 
 .styleListItems {
@@ -142,13 +150,13 @@ body {
 
 .statusPriorityContainer {
   display: flex;
-  justify-content: space-evenly;
+  gap: 15px;
 }
 .statusPriority {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin: 0 10px 0px 10px;
+  flex: 1;
+  min-width: 0;
 }
 
 .statusPriority select {
@@ -203,24 +211,53 @@ body {
   border-radius: 30px;
   margin: 0 10px 10px 10px;
   padding: 0 10px 0 10px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.aboutContainer.teamBox {
-  padding: 0;
-  flex-direction: row;
+#aboutPage h2 {
+  margin: 10px 0 0 0;
+  color: #173b65;
 }
 
-.aboutContainer.teamBox img {
-  border-radius: 25px;
-  margin-right: 5px;
-  left: 0;
+#aboutPage h3 {
+  color: #173b65;
+}
+
+.listContainer.teamBox {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px;
+}
+
+.teamBox p {
+  margin-top: 0;
+}
+
+.developerName {
+  font-weight: 600;
+  color: #173b65;
+  font-size: 16px;
+}
+
+.profilePicture {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.profileSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .aboutImages {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
 }

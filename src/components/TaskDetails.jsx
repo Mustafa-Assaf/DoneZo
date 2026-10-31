@@ -31,13 +31,16 @@ function TaskDetails({ taskValue, setTaskValue }) {
         {/* Description */}
         <div className="formContainer">
           <label title="description">Description</label>
-          <input
+          <textarea
             id="description"
             name="description"
             value={foundTask.description}
             placeholder="Add a description..."
+            rows={4}
+            maxLength={250}
           />
         </div>
+
         <div className="statusPriorityContainer">
           {/* Status */}
           <div className="statusPriority">

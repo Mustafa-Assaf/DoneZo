@@ -3,37 +3,74 @@ function About() {
     <div id="aboutPage">
       <h2>About</h2>
 
-      <div className="aboutContainer">
+      <div className="listContainer">
         <p>
-          Developed as part of the Ironhack Web Development Bootcamp, DoneZo is a single-page application (SPA) built with React. The project focuses on applying core React concepts, including components, state management, props, and event handling, to create a smooth and interactive user experience.
+          Developed as part of the Ironhack Web Development Bootcamp, DoneZo is
+          a single-page application (SPA) built with React. The project focuses
+          on applying core React concepts, including components, state
+          management, props, and event handling, to create a smooth and
+          interactive user experience.
         </p>
       </div>
 
       <h3>Meet the developers-in-the-making</h3>
 
-      <div className="aboutContainer teamBox">
-        <img src="/src/assets/images/picDR.jpg" alt="" width="150px" />
-        
-        <p><i>De Waal Rossouw</i> <br />
-        
-         A world traveller turned aspiring web developer! After years of teaching English abroad, I'm now based in Lisbon, developing my skills in JavaScript, React, HTML, and CSS. My goal is to become a full-stack developer, building responsive, user-friendly applications that solve real-world problems.
-        </p>
-        <div className="aboutImages">
-          <a href="https://github.com/dwrossouw"><img src="/src/assets/images/githublogo2.png" alt="" width="50px" /></a>
-          <a href="https://www.linkedin.com/in/dewaal-rossouw-b24a14301/"><img src="/src/assets/images/linkedin2.jpg" alt="" width="50px" /></a>
+      <div className="listContainer teamBox">
+        <div className="profileSection">
+          <img
+            className="profilePicture"
+            src="/src/assets/images/picDR.jpg"
+            alt=""
+          />
+          <div className="aboutImages">
+            <a href="https://github.com/dwrossouw">
+              <img
+                src="/src/assets/images/githublogo2.png"
+                alt=""
+                width="50px"
+              />
+            </a>
+            <a href="https://www.linkedin.com/in/dewaal-rossouw-b24a14301/">
+              <img src="/src/assets/images/linkedin2.jpg" alt="" width="50px" />
+            </a>
+          </div>
         </div>
+
+        <p>
+          <span className="developerName">De Waal Rossouw</span> <br />A world traveller turned aspiring web
+          developer! After years of teaching English abroad, I'm now based in
+          Lisbon, developing my skills in JavaScript, React, HTML, and CSS. My
+          goal is to become a full-stack developer, building responsive,
+          user-friendly applications that solve real-world problems.
+        </p>
       </div>
 
-      <div className="aboutContainer teamBox">
-        <img src="/src/assets/images/picMA.jpg" alt="" width="150px" />
-        <p><i>Mustafa Assaf</i> <br />
+      <div className="listContainer teamBox">
+        <div className="profileSection">
+          <img
+            className="profilePicture"
+            src="/src/assets/images/picMA.jpg"
+            alt=""
+          />
+          <div className="aboutImages">
+            <a href="">
+              <img
+                src="/src/assets/images/githublogo2.png"
+                alt=""
+                width="50px"
+              />
+            </a>
+            <a href="">
+              <img src="/src/assets/images/linkedin2.jpg" alt="" width="50px" />
+            </a>
+          </div>
+        </div>
+
+        <p>
+          <span className="developerName">Mustafa Assaf</span> <br />
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
           repudiandae atque vero reprehenderit consequuntur exercitationem odit.
         </p>
-       <div className="aboutImages">
-          <a href=""><img src="/src/assets/images/githublogo2.png" alt="" width="50px" /></a>
-          <a href=""><img src="/src/assets/images/linkedin2.jpg" alt="" width="50px" /></a>
-        </div>
       </div>
     </div>
   );
