@@ -1,39 +1,52 @@
-import { ChessKing } from "lucide-react";
-import { useParams, Link } from "react-router-dom";
+import { useState } from "react";
+import { useParams, Link, useNavigate } from "react-router-dom";
 
 function TaskDetails({ taskValue, setTaskValue }) {
   const { taskId } = useParams();
-  console.log(taskId);
-
-  const isEditing = !taskId ? false : true;
-
+  const navigate = useNavigate();
   
-    const foundTask = isEditing ?  taskValue.find((task) => task.id === taskId) :
-    {id: "",
-      task: "",
-      description: "",
-      completed: false,
-      priority: "High"
-    };
-    
-    console.log(foundTask);
+  const isEditing = !taskId ? false : true;
+  const foundTask = isEditing
+    ? taskValue.find((task) => task.id === taskId)
+    : { id: "", task: "", description: "", completed: false, priority: "High" };
 
+  const [formData, setFormData] = useState(foundTask);
 
-  //Create local state and onChange handlers to handle form input
+  const handleFormData = (e) => {
+    const name = e.target.name;
+    let value = e.target.value;
+    const formCopy = { ...formData };
+    name === "status"
+      ? (formCopy.completed = value === "completed")
+      : (formCopy[name] = value);
+    setFormData(formCopy);
+  };
+
+  const handleSaveTask = (e) => {
+    e.preventDefault();
+    if (isEditing) {
+      const stateCopy = [...taskValue];
+      const index = taskValue.findIndex((task) => task.id === taskId);
+      stateCopy[index] = formData;
+      setTaskValue(stateCopy);
+      navigate("/")
+    }
+  };
 
   return (
     <div className="listContainer">
       <h2>Task Details</h2>
 
-      <form>
+      <form onSubmit={handleSaveTask}>
         {/* Task name */}
         <div className="formContainer">
           <label title="task">Task Name</label>
           <input
+            onChange={handleFormData}
             type="text"
             id="task"
             name="task"
-            value={foundTask.task}
+            value={formData.task}
             placeholder="Enter task name"
           />
         </div>
@@ -42,9 +55,10 @@ function TaskDetails({ taskValue, setTaskValue }) {
         <div className="formContainer">
           <label title="description">Description</label>
           <textarea
+            onChange={handleFormData}
             id="description"
             name="description"
-            value={foundTask.description}
+            value={formData.description}
             placeholder="Add a description..."
             rows={4}
             maxLength={250}
@@ -56,9 +70,10 @@ function TaskDetails({ taskValue, setTaskValue }) {
           <div className="statusPriority">
             <label title="status">Status</label>
             <select
+              onChange={handleFormData}
               id="status"
               name="status"
-              value={foundTask.completed === true ? "completed" : "pending"}
+              value={formData.completed === true ? "completed" : "pending"}
             >
               <option value="pending">Pending</option>
               <option value="completed">Completed</option>
@@ -68,7 +83,12 @@ function TaskDetails({ taskValue, setTaskValue }) {
           {/* Priority */}
           <div className="statusPriority">
             <label title="priority">Priority</label>
-            <select id="priority" name="priority" value={foundTask.priority}>
+            <select
+              onChange={handleFormData}
+              id="priority"
+              name="priority"
+              value={formData.priority}
+            >
               <option value="Low">Low</option>
               <option value="Medium">Medium</option>
               <option value="High">High</option>
@@ -82,7 +102,8 @@ function TaskDetails({ taskValue, setTaskValue }) {
               Cancel
             </button>
           </Link>
-          <button id="saveBtn" type="submit">
+
+          <button  id="saveBtn" type="submit">
             Save Task
           </button>
         </div>
