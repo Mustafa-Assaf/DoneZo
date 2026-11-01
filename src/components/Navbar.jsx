@@ -7,12 +7,12 @@ function Navbar() {
     width: "100%",
     minHeight: "70px",
     backgroundColor: "#173B65",
-    borderRadius: "30px 30px 0 0",
+    borderRadius: "20px 20px 0 0",
   };
 
   const imgStyles = {
     height: "70px",
-    borderRadius: "30px",
+    borderRadius: "20px",
   }
 
   return (

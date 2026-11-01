@@ -23,6 +23,8 @@ function App() {
             <Route path="/" element={<HomePage taskValue={taskValue} setTaskValue={setTaskValue}/>} />
             <Route path="/about" element={<About />} />
             <Route path="/task-details/:taskId" element={<TaskDetails taskValue={taskValue} setTaskValue={setTaskValue}/>} />
+             <Route path="/new-task" element={<TaskDetails taskValue={taskValue} setTaskValue={setTaskValue}/>} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

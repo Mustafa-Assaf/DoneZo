@@ -1,8 +1,7 @@
-import ListTask from "./ListTask"
+import { Link } from "react-router-dom";
+import ListTask from "./ListTask";
 
-function HomePage ({taskValue, setTaskValue}) {
-  
-
+function HomePage({ taskValue, setTaskValue }) {
   const handleTaskRemove = (index) => {
     const stateCopy = [...taskValue];
     stateCopy.splice(index, 1);
@@ -19,7 +18,11 @@ function HomePage ({taskValue, setTaskValue}) {
 
   return (
     <div className="listContainer">
-      <h2>My Tasks</h2>
+      <div id="myTasks">
+        <h2>My Tasks</h2>
+        <Link to={`/new-task`} id="newTaskBtn">+ New Task</Link>
+      </div>
+
       <div>
         <ListTask
           taskValue={taskValue}

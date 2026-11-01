@@ -14,7 +14,7 @@ body {
 
 #homepage {
   background-color: #fff3dc;
-  border-radius: 30px;
+  border-radius: 20px;
   max-width: 800px;
   min-height: 100vh;
   margin: 0 auto;
@@ -29,7 +29,7 @@ body {
   margin: 10px 0;
   background-color: #24558a;
   padding: 5px;
-  border-radius: 0 30px 30px 0;
+  border-radius: 0 20px 20px 0;
 }
 
 #stylesNav {
@@ -41,7 +41,7 @@ body {
   width: 100%;
   min-height: 50px;
   background-color: #173b65;
-  border-radius: 0 0 30px 30px;
+  border-radius: 0 0 20px 20px;
   display: flex;
   justify-content: center;
 }
@@ -49,7 +49,7 @@ body {
 #stylesLink {
   background-color: #fff3dc;
   margin: 10px;
-  border-radius: 30px;
+  border-radius: 8px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -68,7 +68,7 @@ body {
 
 .listContainer {
   background-color: #ffffff;
-  border-radius: 30px;
+  border-radius: 20px;
   width: 100%;
   max-width: 500px;
   margin: 10px auto;
@@ -208,7 +208,7 @@ body {
 
 .aboutContainer {
   border: rgb(159, 159, 185) solid 5px;
-  border-radius: 30px;
+  border-radius: 20px;
   margin: 0 10px 10px 10px;
   padding: 0 10px 0 10px;
   display: flex;
@@ -260,4 +260,27 @@ body {
   justify-content: center;
   gap: 10px;
   margin-top: 10px;
+}
+
+#myTasks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#newTaskBtn {
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #24558a;
+  color: white;
+  padding: 10px 12px;
+
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+#newTaskBtn:hover {
+  background-color: #173b65;
 }

@@ -3,11 +3,21 @@ import { useParams, Link } from "react-router-dom";
 
 function TaskDetails({ taskValue, setTaskValue }) {
   const { taskId } = useParams();
-  console.log(typeof taskId);
-  console.log(taskValue.id);
+  console.log(taskId);
 
-  const foundTask = taskValue.find((task) => task.id === taskId);
-  console.log(foundTask);
+  const isEditing = !taskId ? false : true;
+
+  
+    const foundTask = isEditing ?  taskValue.find((task) => task.id === taskId) :
+    {id: "",
+      task: "",
+      description: "",
+      completed: false,
+      priority: "High"
+    };
+    
+    console.log(foundTask);
+
 
   //Create local state and onChange handlers to handle form input
 
@@ -68,9 +78,13 @@ function TaskDetails({ taskValue, setTaskValue }) {
 
         <div className="taskDetailsButtons">
           <Link to="/">
-            <button id="cancelBtn" type="button">Cancel</button>
+            <button id="cancelBtn" type="button">
+              Cancel
+            </button>
           </Link>
-          <button id="saveBtn" type="submit">Save Task</button>
+          <button id="saveBtn" type="submit">
+            Save Task
+          </button>
         </div>
       </form>
     </div>
