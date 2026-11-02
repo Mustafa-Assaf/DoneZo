@@ -19,7 +19,7 @@ function HomePage({ taskValue, setTaskValue }) {
   return (
     <div className="listContainer">
       <div id="myTasks">
-        <h2>My Tasks</h2>
+        <h2>My Tasks ({taskValue.length})</h2>
         <Link to={`/new-task`} id="newTaskBtn">+ New Task</Link>
       </div>
 
