@@ -24,12 +24,33 @@ function TaskDetails({ taskValue, setTaskValue }) {
 
   const handleSaveTask = (e) => {
     e.preventDefault();
+  
     if (isEditing) {
+      // Editing an existing task
       const stateCopy = [...taskValue];
       const index = taskValue.findIndex((task) => task.id === taskId);
+  
       stateCopy[index] = formData;
+  
       setTaskValue(stateCopy);
-      navigate("/")
+      navigate("/");
+  
+    } else {
+      // Creating a new task
+      const newId = Math.max(
+        ...taskValue.map((task) => Number(task.id))
+      ) + 1;
+  
+      const newTask = {
+        ...formData,
+        id: newId.toString(),
+      };
+  
+      const stateCopy = [...taskValue];
+      stateCopy.push(newTask);
+  
+      setTaskValue(stateCopy);
+      navigate("/");
     }
   };
 

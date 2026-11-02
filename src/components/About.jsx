@@ -49,18 +49,18 @@ function About() {
         <div className="profileSection">
           <img
             className="profilePicture"
-            src="/src/assets/images/picMA.jpg"
+            src="/src/assets/images/linkedin3.jpeg"
             alt=""
           />
           <div className="aboutImages">
-            <a href="">
+            <a href="https://github.com/Mustafa-Assaf">
               <img
                 src="/src/assets/images/githublogo2.png"
                 alt=""
                 width="50px"
               />
             </a>
-            <a href="">
+            <a href="https://www.linkedin.com/in/mustafaassaf/">
               <img src="/src/assets/images/linkedin2.jpg" alt="" width="50px" />
             </a>
           </div>
@@ -68,8 +68,9 @@ function About() {
 
         <p>
           <span className="developerName">Mustafa Assaf</span> <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-          repudiandae atque vero reprehenderit consequuntur exercitationem odit.
+          Originally Lebanese, born in Dublin, based in Amsterdam! After 8 years of working in tech across Big Tech, 
+          scale-ups and startups, I decided to take a step back to upskill technically, travel, and find a deeper sense of passion 
+          for my work. Will continue interviewing for Solution Engineering roles post-bootcamp.
         </p>
       </div>
     </div>
