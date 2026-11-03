@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
+import NotFound from "./NotFound";
 
 function TaskDetails({ taskValue, setTaskValue }) {
   const { taskId } = useParams();
   const navigate = useNavigate();
-  
+
   const isEditing = !taskId ? false : true;
   const foundTask = isEditing
     ? taskValue.find((task) => task.id === taskId)
@@ -24,35 +25,36 @@ function TaskDetails({ taskValue, setTaskValue }) {
 
   const handleSaveTask = (e) => {
     e.preventDefault();
-  
+
     if (isEditing) {
       // Editing an existing task
       const stateCopy = [...taskValue];
       const index = taskValue.findIndex((task) => task.id === taskId);
-  
+
       stateCopy[index] = formData;
-  
+
       setTaskValue(stateCopy);
       navigate("/");
-  
     } else {
       // Creating a new task
-      const newId = Math.max(
-        ...taskValue.map((task) => Number(task.id))
-      ) + 1;
-  
+      const newId = Math.max(...taskValue.map((task) => Number(task.id))) + 1;
+
       const newTask = {
         ...formData,
         id: newId.toString(),
       };
-  
+
       const stateCopy = [...taskValue];
       stateCopy.push(newTask);
-  
+
       setTaskValue(stateCopy);
       navigate("/");
     }
   };
+
+  if (isEditing && foundTask === undefined){
+    return <NotFound />;
+  }
 
   return (
     <div className="listContainer">
@@ -124,7 +126,7 @@ function TaskDetails({ taskValue, setTaskValue }) {
             </button>
           </Link>
 
-          <button  id="saveBtn" type="submit">
+          <button id="saveBtn" type="submit">
             Save Task
           </button>
         </div>

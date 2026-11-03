@@ -1,17 +1,12 @@
 import ListItem from "./ListItem";
 
 function ListTask({ taskValue, handleTaskRemove, handleTaskCheck }) {
-  const styleList = {
-    margin: "0px",
-    padding: "0px",
-  };
-
   return (
-    <ul style={styleList}>
+    <ul id="styleList">
       {taskValue.map((item, index) => {
         return (
           <ListItem
-            key={index}
+            key={item.id}
             handleTaskCheck={handleTaskCheck}
             handleTaskRemove={handleTaskRemove}
             item={item}

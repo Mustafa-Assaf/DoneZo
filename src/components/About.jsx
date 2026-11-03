@@ -20,18 +20,18 @@ function About() {
           <img
             className="profilePicture"
             src="/src/assets/images/picDR.jpg"
-            alt=""
+            alt="Image DWR"
           />
           <div className="aboutImages">
             <a href="https://github.com/dwrossouw">
               <img
                 src="/src/assets/images/githublogo2.png"
-                alt=""
+                alt="github logo"
                 width="50px"
               />
             </a>
             <a href="https://www.linkedin.com/in/dewaal-rossouw-b24a14301/">
-              <img src="/src/assets/images/linkedin2.jpg" alt="" width="50px" />
+              <img src="/src/assets/images/linkedin2.png" alt="LinkedIn logo" width="50px" />
             </a>
           </div>
         </div>
@@ -50,18 +50,18 @@ function About() {
           <img
             className="profilePicture"
             src="/src/assets/images/linkedin3.jpeg"
-            alt=""
+            alt="Image Mustafa"
           />
           <div className="aboutImages">
             <a href="https://github.com/Mustafa-Assaf">
               <img
                 src="/src/assets/images/githublogo2.png"
-                alt=""
+                alt="Github logo"
                 width="50px"
               />
             </a>
             <a href="https://www.linkedin.com/in/mustafaassaf/">
-              <img src="/src/assets/images/linkedin2.jpg" alt="" width="50px" />
+              <img src="/src/assets/images/linkedin2.png" alt="LinkedIn logo" width="50px" />
             </a>
           </div>
         </div>

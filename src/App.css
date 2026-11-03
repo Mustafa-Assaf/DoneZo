@@ -13,7 +13,7 @@ body {
 }
 
 #homepage {
-  background-color: #E9EEFF;
+  background-color: #e9eeff;
   border-radius: 20px;
   max-width: 800px;
   min-height: 100vh;
@@ -27,31 +27,46 @@ body {
   max-width: 200px;
   min-width: 150px;
   margin: 10px 0;
-  background-color: #4166F5;
+  background-color: #4166f5;
   padding: 5px;
   border-radius: 0 20px 20px 0;
 }
 
-#stylesNav {
+.styleNav {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 70px;
+  background-color: #4166f5;
+  border-radius: 20px 20px 0 0;
+}
+
+.styleNav img {
+  height: 70px;
+  border-radius: 20px;
 }
 
 #styleFooter {
   width: 100%;
   min-height: 50px;
-  background-color: #4166F5;
+  background-color: #4166f5;
   border-radius: 0 0 20px 20px;
   display: flex;
   justify-content: center;
 }
 
-#stylesLink {
-  background-color: #E9EEFF;
+.stylePageNotFound {
+  align-items: center;
+  text-align: center;
+}
+
+.stylesLink {
+  background-color: #e9eeff;
   margin: 10px;
   border-radius: 8px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 10px;
   align-items: center;
   height: 40px;
   text-decoration: none;
@@ -69,7 +84,7 @@ body {
 }
 
 .listContainer {
-  background-color:white;
+  background-color: white;
   border-radius: 20px;
   width: 100%;
   max-width: 500px;
@@ -78,12 +93,12 @@ body {
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  color: #292D42;
+  color: #292d42;
 }
 .listContainer h2 {
   text-align: center;
   margin: 10px;
-  color: #292D42;
+  color: #292d42;
 }
 
 .listContainer form {
@@ -93,7 +108,7 @@ body {
 }
 
 .listContainer label {
-  color: #292D42;
+  color: #292d42;
 }
 
 .formContainer {
@@ -119,6 +134,11 @@ body {
   overflow-y: auto;
 }
 
+#styleList {
+  margin: 0px;
+  padding: 0px;
+}
+
 .styleListItems {
   display: flex;
   flex-direction: column;
@@ -129,14 +149,14 @@ body {
   box-shadow: 0 2px 6px rgba(56, 43, 72, 0.04);
   padding: 10px;
   margin-bottom: 5px;
-  background-color: #EDF4FC;
+  background-color: #edf4fc;
 }
 
 .styleListItems .taskName {
   flex: 1;
   min-width: 0;
   margin-left: 5px;
-  color: #292D42;
+  color: #292d42;
 }
 
 .styleListItems .taskEditLink {
@@ -227,18 +247,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #292D42;
-}
-
-.aboutContainer {
-  border: rgb(159, 159, 185) solid 5px;
-  border-radius: 20px;
-  margin: 0 10px 10px 10px;
-  padding: 0 10px 0 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #292D42;
+  color: #292d42;
 }
 
 #aboutPage h2 {
@@ -263,7 +272,7 @@ body {
 
 .developerName {
   font-weight: 600;
-  color: #292D42;
+  color: #292d42;
   font-size: 16px;
 }
 
@@ -291,22 +300,47 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #292D42;
+  color: #292d42;
 }
 
 #newTaskBtn {
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  background-color: #4166F5;
+  background-color: #4166f5;
   color: white;
   padding: 10px 12px;
 
   display: inline-flex;
   align-items: center;
   text-decoration: none;
+
+  white-space: nowrap;
 }
 
 #newTaskBtn:hover {
-  background-color: #293FAE;
+  background-color: #293fae;
+}
+
+#srtBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e9eeff;
+  color: #4166f5;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+#srtBtn:hover {
+  background-color: #d8e2ff;
+}
+
+@media (max-width: 529px) {
+  #myTasks {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }

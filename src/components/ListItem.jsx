@@ -25,28 +25,29 @@ function ListItem({ handleTaskCheck, handleTaskRemove, item, index }) {
     fontWeight: "500",
     display: "flex",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   };
 
   const [showDescription, setShowDescription] = useState(false);
 
   const handleToggleDescription = () => {
-    let toggle = !showDescription;
-    setShowDescription(toggle);
+    setShowDescription(!showDescription);
   };
 
   return (
-    <li
-      className="styleListItems"
-      
-    >
+    <li className="styleListItems">
       <div style={{ display: "flex", flex: "1", alignItems: "center" }}>
         <input
           onChange={(event) => handleTaskCheck(index, event.target.checked)}
           checked={item.completed}
           type="checkbox"
         />
-        <span className="taskName" style={item.completed ? styleListItemsDone : {}}>{item.task}</span>
+        <span
+          className="taskName"
+          style={item.completed ? styleListItemsDone : {}}
+        >
+          {item.task}
+        </span>
         <div className="listIcons">
           <span style={stylePriorityItems}>{item.priority}</span>
           <button onClick={handleToggleDescription}>

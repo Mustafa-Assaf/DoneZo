@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import ListTask from "./ListTask";
-import { ArrowDownAZ, ClockArrowDown, ArrowUpAZ, ClockArrowUp} from "lucide-react";
+import { ClockArrowDown, ClockArrowUp, ArrowDownUp } from "lucide-react";
+import { useState } from "react";
 
 function HomePage({ taskValue, setTaskValue }) {
+  const [sortByPriority, setSortByPriority] = useState("unsorted");
+
   const handleTaskRemove = (index) => {
     const stateCopy = [...taskValue];
     stateCopy.splice(index, 1);
@@ -11,15 +14,9 @@ function HomePage({ taskValue, setTaskValue }) {
 
   const handleTaskCheck = (index, checked) => {
     const stateCopy = [...taskValue];
-    const taskCopy = { ...stateCopy[index] };
+    const taskCopy = { ...stateCopy[index],  };
     taskCopy.completed = checked;
     stateCopy[index] = taskCopy;
-    setTaskValue(stateCopy);
-  };
-
-  const handleSortByName = () => {
-    const stateCopy = [...taskValue];
-    stateCopy.sort((a, b) => a.task.localeCompare(b.task));
     setTaskValue(stateCopy);
   };
 
@@ -27,20 +24,29 @@ function HomePage({ taskValue, setTaskValue }) {
     const sortObj = { High: 1, Medium: 2, Low: 3 };
 
     const stateCopy = [...taskValue];
-    stateCopy.sort((a, b) => sortObj[a.priority] - sortObj[b.priority]);
-    console.log(stateCopy);
-    setTaskValue(stateCopy);
+    if (sortByPriority === "high" || sortByPriority === "unsorted") {
+      stateCopy.sort((a, b) => sortObj[a.priority] - sortObj[b.priority]);
+      setTaskValue(stateCopy);
+      setSortByPriority("low");
+    } else if (sortByPriority === "low") {
+      stateCopy.sort((a, b) => sortObj[b.priority] - sortObj[a.priority]);
+      setTaskValue(stateCopy);
+      setSortByPriority("high");
+    }
   };
 
   return (
     <div className="listContainer">
       <div id="myTasks">
         <h2>My Tasks ({taskValue.length})</h2>
-        <button onClick={handleSortByName}>
-          <ArrowDownAZ /><ArrowUpAZ />
-        </button>
-        <button onClick={handleSortByPriority}>
-          <ClockArrowDown /> <ClockArrowUp />
+        <button onClick={handleSortByPriority} id="srtBtn">
+          {sortByPriority === "unsorted" ? (
+            <ArrowDownUp />
+          ) : sortByPriority === "high" ? (
+            <ClockArrowDown />
+          ) : (
+            <ClockArrowUp />
+          )}
         </button>
         <Link to={`/new-task`} id="newTaskBtn">
           + New Task

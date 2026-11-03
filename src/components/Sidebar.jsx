@@ -5,9 +5,9 @@ function Sidebar (){
 
     return (
         <aside id="styleSidebar">
-            <nav id="stylesNav">
-                <Link to="/" id="stylesLink"><House size={22} />Home</Link>
-                <Link to="/About" id="stylesLink"><Info size={22} />About</Link>
+            <nav>
+                <Link to="/" className="stylesLink"><House size={22} />Home</Link>
+                <Link to="/about" className="stylesLink"><Info size={22} />About</Link>
             </nav>
         </aside>
     )
