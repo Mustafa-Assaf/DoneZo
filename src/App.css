@@ -7,13 +7,13 @@
 }
 
 body {
-  background-color: black;
+  background-color: whitesmoke;
   margin: 0;
   padding: 0;
 }
 
 #homepage {
-  background-color: #fff3dc;
+  background-color: #E9EEFF;
   border-radius: 20px;
   max-width: 800px;
   min-height: 100vh;
@@ -27,7 +27,7 @@ body {
   max-width: 200px;
   min-width: 150px;
   margin: 10px 0;
-  background-color: #24558a;
+  background-color: #4166F5;
   padding: 5px;
   border-radius: 0 20px 20px 0;
 }
@@ -40,14 +40,14 @@ body {
 #styleFooter {
   width: 100%;
   min-height: 50px;
-  background-color: #173b65;
+  background-color: #4166F5;
   border-radius: 0 0 20px 20px;
   display: flex;
   justify-content: center;
 }
 
 #stylesLink {
-  background-color: #fff3dc;
+  background-color: #E9EEFF;
   margin: 10px;
   border-radius: 8px;
   display: flex;
@@ -78,11 +78,12 @@ body {
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  color: #292D42;
 }
 .listContainer h2 {
   text-align: center;
   margin: 10px;
-  color: #173b65;
+  color: #292D42;
 }
 
 .listContainer form {
@@ -92,7 +93,7 @@ body {
 }
 
 .listContainer label {
-  color: #173b65;
+  color: #292D42;
 }
 
 .formContainer {
@@ -135,6 +136,7 @@ body {
   flex: 1;
   min-width: 0;
   margin-left: 5px;
+  color: #292D42;
 }
 
 .styleListItems .taskEditLink {
@@ -225,6 +227,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #292D42;
 }
 
 .aboutContainer {
@@ -235,6 +238,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #292D42;
 }
 
 #aboutPage h2 {
@@ -259,7 +263,7 @@ body {
 
 .developerName {
   font-weight: 600;
-  color: #173b65;
+  color: #292D42;
   font-size: 16px;
 }
 
@@ -287,13 +291,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #292D42;
 }
 
 #newTaskBtn {
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  background-color: #24558a;
+  background-color: #4166F5;
   color: white;
   padding: 10px 12px;
 
@@ -303,5 +308,5 @@ body {
 }
 
 #newTaskBtn:hover {
-  background-color: #173b65;
+  background-color: #293FAE;
 }
