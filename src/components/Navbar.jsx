@@ -6,7 +6,7 @@ function Navbar() {
     alignItems: "center",
     width: "100%",
     minHeight: "70px",
-    backgroundColor: "#173B65",
+    backgroundColor: "#4166F5",
     borderRadius: "20px 20px 0 0",
   };
 
