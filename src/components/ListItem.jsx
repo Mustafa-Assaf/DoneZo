@@ -34,7 +34,7 @@ function ListItem({ handleTaskCheck, handleTaskRemove, item, index }) {
     let toggle = !showDescription;
     setShowDescription(toggle);
   };
-  
+
   return (
     <li
       className="styleListItems"
